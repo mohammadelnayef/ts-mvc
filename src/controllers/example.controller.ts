@@ -1,6 +1,6 @@
-const {fetchData} = require("../models/example.model");
-const dataService = require("../services/process-data.service");
-const path = 'https://jsonplaceholder.typicode.com/users';
+import fetchData from '../models/example.model';
+import dataService from '../services/process-data.service';
+const path: string = 'https://jsonplaceholder.typicode.com/users';
 
 const getProcessedData = async (req, res) => {
     const apiData = await fetchData(path);
@@ -8,6 +8,5 @@ const getProcessedData = async (req, res) => {
     res.json(result);
 }
 
-module.exports = {
-    getProcessedData
-}
+
+export default getProcessedData

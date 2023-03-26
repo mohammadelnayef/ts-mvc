@@ -1,5 +1,5 @@
-const exampleController = require("../controllers/example.controller");
-const { Router } = require('express')
+import exampleController from '../controllers/example.controller';
+import { Router } from 'express';
 
 const exampleRouter = Router()
 
@@ -11,5 +11,5 @@ exampleRouter.get('/', (req, res) => {
 // This gets called on /example/show.
 exampleRouter.get('/show', exampleController.getProcessedData);
 
-module.exports = exampleRouter
+export default exampleRouter
 

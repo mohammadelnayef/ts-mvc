@@ -1,5 +1,5 @@
-const exampleRouter = require("./example.router");
-const { Router } = require('express');
+import exampleRouter from './example.router';
+import { Router } from 'express';
 
 const api = Router();
 
